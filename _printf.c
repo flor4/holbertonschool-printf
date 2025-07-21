@@ -1,32 +1,68 @@
 #include "main.h"
+#include <stdarg.h>
+#include <unistd.h>
 
 /**
- * _printf - display output according to a format.
+ * _printf - A simplified version of printf.
+ * @format: Format string containing the text to print.
  *
- * @format: character string.
- *
- * Return: number of character printed.
- *
+ * Return: Number of characters printed.
  */
 
 int _printf(const char *format, ...)
 {
-	int i;
+	va_list args;
+	int i = 0, count = 0;
+	char *str;
+	char ch;
 
-	if (format == NULL)
+	if (!format)
 		return (-1);
 
-	for (i = 0; format[i] != '\0'; i++)
+	va_start(args, format);
+
+	while (!format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && !format[i + 1])
 		{
-			if (i++ == 's')
+			i++;
+			if (format[i] == 'c')
 			{
-				write(1, &format[i], 1);
+				ch = (char)va_arg(args, int);
+				write(1, &ch, 1);
+				count++;
 			}
-			else if (i++ == 'c')
+			else if (format[i] == 's')
+			{
+				str = va_arg(args, char *);
+				if (!str)
+					str = "(null)";
+				while (*str)
+				{
+					write(1, str++, 1);
+					count++;
+				}
+			}
+			else if (format[i] == '%')
+			{
+				write(1, "%", 1);
+				count++;
+			}
+			else
+			{
+				write(1, "%", 1);
 				write(1, &format[i], 1);
+				count += 2;
+			}
 		}
+		else
+		{
+			write(1, &format[i], 1);
+			count++;
+		}
+		i++;
 	}
-	return (0);
+
+	va_end(args);
+	return (count);
 }
