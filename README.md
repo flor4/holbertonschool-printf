@@ -21,7 +21,7 @@ git clone https://github.com/flor4/holbertonschool-printf
 ```sh
 cd holbertonschool-printf
 ```
-#### Compile with 
+#### Compile with
 ```sh
 gcc *.c
 ```
