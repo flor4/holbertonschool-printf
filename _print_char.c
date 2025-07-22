@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * _print_char - manage character print
- * 
- * @args: char to print
- * 
- * Return: 1
+ * _print_char - Prints a single character to stdout.
+ * @args: va_list containing the character to print.
+ *
+ * Return: Number of characters printed (always 1).
  */
 
 int _print_char(va_list args)
 {
 	int ch = va_arg(args, int);
 
-	write(1, &ch, 1);
+	/* Print the character */
+	_putchar(ch);
 
 	return (1);
 }
