@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
-				break;
+				return (-1);
 			if (format[i + 1] == 'c')
 				count += _print_char(args);
 			else if (format[i + 1] == 's')
