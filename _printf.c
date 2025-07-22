@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <unistd.h>
 
 /**
  * _printf - Our version of printf.
@@ -12,41 +10,38 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i, count = 0;
+	int i = 0, count = 0;
 
-	if (!format) /* Check for NULL format string */
+	if (format == NULL) /* Check for NULL format string */
 		return (-1);
 
 	va_start(args, format);
 
-	/* Loop through each character in the format string */
-	for (i = 0; format[i]; i++)
+	while (format[i]) /* Loop through each character in the format string */
 	{ /* Handle format specifiers */
-		if (format[i] == '%' && format[i + 1])
+		if (format[i] == '%')
 		{
-			i++;
-			if (format[i] == 'c')
+			if (format[i + 1] == '\0')
+				break;
+			if (format[i + 1] == 'c')
 				count += _print_char(args);
-			else if (format[i] == 's')
+			else if (format[i + 1] == 's')
 				count += _print_string(args);
-			else if (format[i] == 'd' || format[i] == 'i')
+			else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 				count += _print_integer(args);
-			else if (format[i] == '%')
-			{ /* Print a single '%' */
-				_putchar('%');
-				count += 1;
-			}
+			else if (format[i + 1] == '%')
+				count += _putchar('%'); /* Print a single '%' */
 			else
 			{ /* Print unknown specifier as is */
-				_putchar('%');
-				_putchar(format[i]);
-				count += 2;
+				count += _putchar('%');
+				count += _putchar(format[i + 1]);
 			}
+			i += 2;
 		}
 		else
 		{ /* Print regular character */
-			_putchar(format[i]);
-			count += 1;
+			count += _putchar(format[i]);
+			i++;
 		}
 	}
 	va_end(args);
