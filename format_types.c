@@ -10,6 +10,7 @@ struct format_specifier format_types[] = {
 	{'x', _print_lower_hexa},
 	{'X', _print_upper_hexa},
 	{'b', _print_binary},
+	{'S', _print_ascii},
 	{'%', NULL},
 	{'\0', NULL}
 };
