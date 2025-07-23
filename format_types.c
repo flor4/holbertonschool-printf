@@ -5,6 +5,7 @@ struct format_specifier format_types[] = {
 	{'s', _print_string},
 	{'d', _print_integer},
 	{'i', _print_integer},
+	{'b', _print_binary},
 	{'%', NULL},
 	{'\0', NULL}
 };
