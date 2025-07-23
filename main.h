@@ -12,6 +12,7 @@ int _printf(const char *format, ...);
 int _print_char(va_list args);
 int _print_string(va_list args);
 int _print_integer(va_list args);
+int _print_unsigned(va_list args);
 int _print_binary(va_list args);
 
 /**
