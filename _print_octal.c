@@ -10,10 +10,10 @@
 int _print_octal(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
-	int octalNum[32]; /* Array to store octal number */
+	int octalNum[11]; /* Array to store octal number */
 	int i = 0, count = 0;
 
-	if (num == 0) /* Manage explicitly if number = 0*/
+	if (num == 0) /* Manage explicitly if number = 0 */
 		return (_putchar('0'));
 
 	for (; num > 0; i++)
