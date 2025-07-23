@@ -9,23 +9,20 @@
 
 int _print_integer(va_list args)
 {
-	long int n = va_arg(args, int);
-	int count = 0;
-	unsigned long int num, temp_num, div = 1;
+	int num = va_arg(args, int);
+	int count = 0, div = 1;
+	unsigned int temp_num;
 
-	if (n == 0) /* Handle zero explicitly */
-	{
-		_putchar('0');
-		return (1);
-	}
+	if (num == 0) /* Handle zero explicitly */
+		return (_putchar('0'));
 
-	if (n < 0) /* Handle negative numbers */
+	if (num < 0) /* Handle negative numbers */
 	{
 		count += _putchar('-');
-		num = -n;
+		num = -num;
 	}
 	else
-		num = n;
+		num = num;
 
 	temp_num = num;
 
