@@ -1,44 +1,66 @@
-NAME
-
-	_printf -  function that produces output according to a format.
+.TH _PRINTF 1 "21 juillet 2025" "1.0" "First page of _printf manual"
 
 
-SYNOPSIS
+.SH NAME
 
-	int _printf(const char *format, ...);
-
-DESCRIPTION
-
-	The _printf function prints a formatted string to the standard ouput (stdout).
-	It takes a format string and a variable number of arguments.
-
-	Supported format specifiers are:
-
-	- %c: character.
-	- %s: string.
-	- %i/%d: signed decimal integer.
-	- %%: the percent character.
-
-RETURN VALUES
-
-	The function returns the total number of characters printed to the standard output.
-	In case of error, a negative value may be returned: return (-1);
+\fB_printf\fR -  function that produces output according to a format.
 
 
-AUTHORS
+.SH SYNOPSIS
 
-	Franck Spadotto.
-	Flora Salanson.
+.B	int _printf(const char *format, ...);
 
-COPYLEFT
+.SH DESCRIPTION
 
-	This program is free software; you can redistribute it and/or modify it under the terms of
-	the GNU General Public License (GPL) version 3, as published by the Free Software Foundation.
+The \fB_printf\fR function prints a formatted string to the standard ouput (stdout).
+It takes a format string and a variable number of arguments.
 
-	This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-	See the GNU General Public License for more details.
+.PP
+.B Supported format specifiers are:
 
-	You should have received a copy of the GNU General Public License along with this program;
-	if not, see <http://www.gnu.org/licenses/>.
+- %c: character.
+- %s: string.
+- %i/%d: signed decimal integer.
+- %%: the percent character.
+
+.SH RETURN VALUES
+
+The function returns the total number of characters printed to the standard output.
+In case of error, a negative value may be returned: return (-1);
+
+.SH EXAMPLES
+
+Here is a simple example of using
+.B _printf
+In a C program: print a the string "bisous" followed by a newline:
+
+.nf
+#include <stdio.h>
+
+int main (void) {
+	_printf("bisous \\n");
+	return (0);
+}
+.fi
+
+.SH AUTHORS
+
+Franck Spadotto.
+Flora Salanson.
+
+.SH ALSO SEE
+
+prinft, putchar, write. 
+
+.SH COPYLEFT
+
+This program is free software; you can redistribute it and/or modify it under the terms of
+the GNU General Public License (GPL) version 3, as published by the Free Software Foundation.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+.PP
+You should have received a copy of the GNU General Public License along with this program;
+if not, see F<http://www.gnu.org/licenses/>.
 
