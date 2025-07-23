@@ -7,6 +7,8 @@ struct format_specifier format_types[] = {
 	{'i', _print_integer},
 	{'u', _print_unsigned},
 	{'o', _print_octal},
+	{'x', _print_lower_hexa},
+	{'X', _print_upper_hexa},
 	{'b', _print_binary},
 	{'%', NULL},
 	{'\0', NULL}
