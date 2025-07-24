@@ -12,7 +12,7 @@ int _print_memory(va_list args)
 	char *str = va_arg(args, void *);
 	unsigned long int adress = (unsigned long int)str;
 	int i = 0, count = 0;
-	char hex_digits[] = "0123456789ABCDEF";
+	char hex_digits[] = "0123456789abcdef";
 	char buffer[17]; /* 16 for adress + \0 */
 
 	if (str == NULL)
