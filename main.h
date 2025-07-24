@@ -20,6 +20,7 @@ int _print_lower_hexa(va_list args);
 int _print_upper_hexa(va_list args);
 int _print_binary(va_list args);
 int _print_ascii(va_list args);
+int _print_memory(va_list args);
 
 /**
  * struct format_specifier - Struct that links a format char to a print func.
