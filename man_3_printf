@@ -1,16 +1,19 @@
+.defcolor bisous rgb #ff00ff
+.defcolor vitamine #ff8700
+
 .TH _PRINTF 1 "21 juillet 2025" "1.0" "First page of _printf manual"
 
 
-.SH NAME
+.SH \m[cyan]NAME\m[white]
 
 \fB_printf\fR -  function that produces output according to a format.
 
 
-.SH SYNOPSIS
+.SH \m[cyan]SYNOPSIS\m[white]
 
 .B	int _printf(const char *format, ...);
 
-.SH DESCRIPTION
+.SH \m[cyan]DESCRIPTION\m[white]
 
 The \fB_printf\fR function prints a formatted string to the standard ouput (stdout). It takes a format string and a variable number of arguments.
 
@@ -18,47 +21,47 @@ The \fB_printf\fR function prints a formatted string to the standard ouput (stdo
 .B Supported format specifiers are:
 
 .IP  
- %c: character.
+ - %\m[yellow]c\m[white]: character.
 .IP   
- %s: string.
+ - %\m[yellow]s\m[white]: string.
 .IP   
- %i/%d: signed decimal integer.
-.IP   
- %%: the percent character.
+ - %\m[yellow]i\m[white]/%\m[yellow]d\m[white]: signed decimal integer.
+.IP
+ - %\m[yellow]%\m[white]: the percent character.
 
 
-.SH RETURN VALUES
+.SH \m[cyan]RETURN VALUES\m[white]
 
 The function returns the total number of characters printed to the standard output. In case of error, a negative value may be returned: return (-1);
 
-.SH EXAMPLES
+.SH \m[cyan]EXAMPLES\m[white]
 
 Here is a simple example of using
 .B _printf
-In a C program: print a the string "bisous" followed by a newline:
+In a C program: print a the string \m[bisous]"bisous"\m[white] followed by a newline:
 
 .nf
 #include <stdio.h>
 
 int main (void) {
-	_printf("bisous \\n");
+	_printf("\m[bisous]bisous\m[white] \\n");
 	return (0);
 }
 .fi
 
-.SH AUTHORS
+.SH \m[cyan]AUTHORS\m[white]
 
 .IP
-Franck Spadotto.
+\m[yellow]F\m[white]r\m[red]a\m[white]nck \m[green]S\m[white]p\m[red]a\m[white]dott\m[blue]o\m[blue].
 .IP
-Flora Salanson.
+\m[yellow]F\m[white]lor\m[red]a\m[white] \m[green]S\m[white]al\m[red]a\m[white]nso\m[blue]n\m[blue].
 
 
-.SH ALSO SEE
+.SH \m[cyan]ALSO SEE\m[white]
 
 prinft, putchar, write. 
 
-.SH COPYLEFT
+.SH \m[cyan]COPYLEFT\m[white]
 
 This program is free software; you can redistribute it and/or modify it under the terms of
 the GNU General Public License (GPL) version 3, as published by the Free Software Foundation.
@@ -68,5 +71,5 @@ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 See the GNU General Public License for more details.
 .PP
 You should have received a copy of the GNU General Public License along with this program;
-if not, see <http://www.gnu.org/licenses/>.
+if not, see\m[purple]<http://www.gnu.org/licenses/>\m[white].
 
