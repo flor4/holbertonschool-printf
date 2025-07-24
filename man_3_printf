@@ -1,44 +1,88 @@
-NAME
+.defcolor bisous rgb #ff00ff
+.defcolor vitamine #ff8700
 
-	_printf -  function that produces output according to a format.
-
-
-SYNOPSIS
-
-	int _printf(const char *format, ...);
-
-DESCRIPTION
-
-	The _printf function prints a formatted string to the standard ouput (stdout).
-	It takes a format string and a variable number of arguments.
-
-	Supported format specifiers are:
-
-	- %c: character.
-	- %s: string.
-	- %i/%d: signed decimal integer.
-	- %%: the percent character.
-
-RETURN VALUES
-
-	The function returns the total number of characters printed to the standard output.
-	In case of error, a negative value may be returned: return (-1);
+.TH _PRINTF 1 "21 juillet 2025" "1.0" "First page of _printf manual"
 
 
-AUTHORS
+.SH \m[cyan]NAME\m[white]
 
-	Franck Spadotto.
-	Flora Salanson.
+\fB_printf\fR -  function that produces output according to a format.
 
-COPYLEFT
 
-	This program is free software; you can redistribute it and/or modify it under the terms of
-	the GNU General Public License (GPL) version 3, as published by the Free Software Foundation.
+.SH \m[cyan]SYNOPSIS\m[white]
 
-	This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-	See the GNU General Public License for more details.
+.B	int _printf(const char *format, ...);
 
-	You should have received a copy of the GNU General Public License along with this program;
-	if not, see <http://www.gnu.org/licenses/>.
+.SH \m[cyan]DESCRIPTION\m[white]
+
+The \fB_printf\fR function prints a formatted string to the standard ouput (stdout). It takes a format string and a variable number of arguments.
+
+.PP
+.B Supported format specifiers are:
+
+.IP
+ - %\m[yellow]c\m[white]: print a character.
+.IP
+ - %\m[yellow]s\m[white]: print a string.
+.IP
+ - %\m[yellow]i\m[white]/%\m[yellow]d\m[white]: print a signed decimal integer.
+.IP
+ - %\m[yellow]%\m[white]: print the percent character.
+.IP
+ - %\m[yellow]u\m[white]: print unsigned integer.
+.IP
+ - %\m[yellow]o\m[white]: print octal number.
+.IP
+ - %\m[yellow]x\m[white]: print lower hexadecimal -0 to f-.
+.IP
+ - %\m[yellow]X\m[white]: print upper hexadecimal -0 to F-.
+.IP
+ - %\m[yellow]b\m[white]: print binary number.
+.IP
+ - %\m[yellow]S\m[white]: print special characters in hexadecimal.
+.IP
+ - %\m[yellow]p\m[white]: print pointer memory address.
+
+.SH \m[cyan]RETURN VALUES\m[white]
+
+The function returns the total number of characters printed to the standard output. In case of error, a negative value may be returned: return (-1);
+
+.SH \m[cyan]EXAMPLES\m[white]
+
+Here is a simple example of using
+.B _printf
+In a C program: print a the string \m[bisous]"bisous"\m[white] followed by a newline:
+
+.nf
+#include <stdio.h>
+
+int main (void) {
+	_printf("\m[bisous]bisous\m[white] \\n");
+	return (0);
+}
+.fi
+
+.SH \m[cyan]AUTHORS\m[white]
+
+.IP
+\m[yellow]F\m[white]r\m[red]a\m[white]nck \m[green]S\m[white]p\m[red]a\m[white]dott\m[blue]o\m[blue].
+.IP
+\m[yellow]F\m[white]lor\m[red]a\m[white] \m[green]S\m[white]al\m[red]a\m[white]nso\m[blue]n\m[blue].
+
+
+.SH \m[cyan]ALSO SEE\m[white]
+
+prinft, putchar, write.
+
+.SH \m[cyan]COPYLEFT\m[white]
+
+This program is free software; you can redistribute it and/or modify it under the terms of
+the GNU General Public License (GPL) version 3, as published by the Free Software Foundation.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+.PP
+You should have received a copy of the GNU General Public License along with this program;
+if not, see\m[purple]<http://www.gnu.org/licenses/>\m[white].
 
