@@ -37,7 +37,7 @@ typedef struct format_specifier
 	int (*func)(va_list);
 } format_specifier_t;
 
-/* Global array of format specifiers and their handlers */
-extern struct format_specifier format_types[];
+/* Function to get format specifiers array */
+format_specifier_t *get_format_types(void);
 
 #endif
