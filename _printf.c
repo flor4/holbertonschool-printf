@@ -17,16 +17,13 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '\0')
 		return (0);
-
 	format_types = get_format_types();
 	va_start(args, format);
 	for (i = 0; format[i]; i++) /* Loop through each char in the format string */
 	{ /* Handle format specifiers */
 		if (format[i] == '%')
 		{
-			if (format[++i] == '\0')
-				return (-1);
-			if (format[i] == '%')
+			if (format[++i] == '%')
 			{ /* Handle % at end of string */
 				count += _putchar('%');
 				continue;

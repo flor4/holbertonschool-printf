@@ -20,7 +20,7 @@ int _print_reverse(va_list args)
 		;
 
 	/* Print in reverse */
-	for (i -= 1; i >= 0; i--)
+	for (i = i - 1; i >= 0; i--)
 	{
 		_putchar(str[i]);
 		count++;
