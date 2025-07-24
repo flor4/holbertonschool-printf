@@ -23,6 +23,7 @@ int _print_binary(va_list args);
 int _print_ascii(va_list args);
 int _print_memory(va_list args);
 int _print_reverse(va_list args);
+int _print_rot13(va_list args);
 
 /**
  * struct format_specifier - Struct that links a format char to a print func.

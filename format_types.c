@@ -25,6 +25,7 @@ format_specifier_t *get_format_types(void)
 		{'S', _print_ascii},
 		{'p', _print_memory},
 		{'r', _print_reverse},
+		{'R', _print_rot13},
 		{'%', NULL},
 		{'\0', NULL}
 	};
