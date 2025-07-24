@@ -7,35 +7,43 @@
  * Return: Number of characters printed.
  */
 
-int _print_memory(va_list args)
-{
-	char *str = va_arg(args, void *);
-	unsigned long int adress = (unsigned long int)str;
-	int i = 0, count = 0;
-	char hex_digits[] = "0123456789abcdef";
-	char buffer[17]; /* 16 for adress + \0 */
-
-	if (str == NULL)
-	{ /* If pointer is NULL */
-		count += _printf("(nil)");
-		return (count);
-	}
-
-	while (adress > 0)
-	{ /* Convert adress into hexa format */
-		buffer[i++] = hex_digits[adress % 16];
-		adress /= 16;
-	}
-
-	_putchar('0');
-	_putchar('x');
-	count += 2;
-
-	while (i--)
-	{
-		_putchar(buffer[i]);
-		count++;
-	}
-
-	return (count);
-}
+ int _print_memory(va_list args)
+ {
+	 void *ptr = va_arg(args, void *);
+	 unsigned long int address = (unsigned long int)ptr;
+	 int i, count = 0, start = 0;
+	 char hex_digits[] = "0123456789abcdef";
+	 char buffer[17]; /* Max size: 16 for 64-bit address + \0 */
+	 int digits = sizeof(void *) * 2; /* 8 for 32-bit, 16 for 64-bit */
+ 
+	 if (ptr == NULL)
+	 {
+		 count += _printf("(nil)");
+		 return (count);
+	 }
+ 
+	 /* Convert address to hex */
+	 for (i = digits - 1; i >= 0; i--)
+	 {
+		 buffer[i] = hex_digits[address % 16];
+		 address /= 16;
+	 }
+	 buffer[digits] = '\0';
+ 
+	 /* Find first non-zero digit, keeping at least one digit */
+	 while (start < digits - 1 && buffer[start] == '0')
+		 start++;
+ 
+	 _putchar('0');
+	 _putchar('x');
+	 count += 2;
+ 
+	 /* Print each character of the address, skipping leading zeros */
+	 for (i = start; i < digits; i++)
+	 {
+		 _putchar(buffer[i]);
+		 count++;
+	 }
+ 
+	 return (count);
+ }
