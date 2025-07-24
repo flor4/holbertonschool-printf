@@ -20,15 +20,28 @@ The \fB_printf\fR function prints a formatted string to the standard ouput (stdo
 .PP
 .B Supported format specifiers are:
 
-.IP  
- - %\m[yellow]c\m[white]: character.
-.IP   
- - %\m[yellow]s\m[white]: string.
-.IP   
- - %\m[yellow]i\m[white]/%\m[yellow]d\m[white]: signed decimal integer.
 .IP
- - %\m[yellow]%\m[white]: the percent character.
-
+ - %\m[yellow]c\m[white]: print a character.
+.IP
+ - %\m[yellow]s\m[white]: print a string.
+.IP
+ - %\m[yellow]i\m[white]/%\m[yellow]d\m[white]: print a signed decimal integer.
+.IP
+ - %\m[yellow]%\m[white]: print the percent character.
+.IP
+ - %\m[yellow]u\m[white]: print unsigned integer.
+.IP
+ - %\m[yellow]o\m[white]: print octal number.
+.IP
+ - %\m[yellow]x\m[white]: print lower hexadecimal -0 to f-.
+.IP
+ - %\m[yellow]X\m[white]: print upper hexadecimal -0 to F-.
+.IP
+ - %\m[yellow]b\m[white]: print binary number.
+.IP
+ - %\m[yellow]S\m[white]: print special characters in hexadecimal.
+.IP
+ - %\m[yellow]p\m[white]: print pointer memory address.
 
 .SH \m[cyan]RETURN VALUES\m[white]
 
@@ -59,7 +72,7 @@ int main (void) {
 
 .SH \m[cyan]ALSO SEE\m[white]
 
-prinft, putchar, write. 
+prinft, putchar, write.
 
 .SH \m[cyan]COPYLEFT\m[white]
 

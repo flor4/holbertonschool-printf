@@ -5,7 +5,16 @@ The `_printf()` function provides formatted output conversion and printing, supp
 
 - `%c` : Character
 - `%s` : String
-- `%d`, `%i` : Signed integer
+- `%d`: signed integer.
+- `%i`: Signed integer.
+- `%%`: The percent character.
+- `%u`: Unsigned integer.
+- `%o`: Octal number.
+- `%x`: Lower hexadecimal -0 to f-.
+- `%X`: Upper hexadecimal -0 to F-.
+- `%b`: Binary number.
+- `%S`: Special characters in hexadecimal.
+- `%p`: Pointer memory address.
 
 This project was developed as our first group project in Holberton School.
 It purpose is to deepen understanding of variadic functions, string manipulation, output formatting in C in peer coding environnement.
