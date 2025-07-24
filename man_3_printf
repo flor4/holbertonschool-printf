@@ -12,21 +12,24 @@
 
 .SH DESCRIPTION
 
-The \fB_printf\fR function prints a formatted string to the standard ouput (stdout).
-It takes a format string and a variable number of arguments.
+The \fB_printf\fR function prints a formatted string to the standard ouput (stdout). It takes a format string and a variable number of arguments.
 
 .PP
 .B Supported format specifiers are:
 
-- %c: character.
-- %s: string.
-- %i/%d: signed decimal integer.
-- %%: the percent character.
+.IP  
+ %c: character.
+.IP   
+ %s: string.
+.IP   
+ %i/%d: signed decimal integer.
+.IP   
+ %%: the percent character.
+
 
 .SH RETURN VALUES
 
-The function returns the total number of characters printed to the standard output.
-In case of error, a negative value may be returned: return (-1);
+The function returns the total number of characters printed to the standard output. In case of error, a negative value may be returned: return (-1);
 
 .SH EXAMPLES
 
@@ -45,12 +48,15 @@ int main (void) {
 
 .SH AUTHORS
 
+.IP
 Franck Spadotto.
+.IP
 Flora Salanson.
+
 
 .SH ALSO SEE
 
-prinft, putchar, write.
+prinft, putchar, write. 
 
 .SH COPYLEFT
 
@@ -62,5 +68,5 @@ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 See the GNU General Public License for more details.
 .PP
 You should have received a copy of the GNU General Public License along with this program;
-if not, see F<http://www.gnu.org/licenses/>.
+if not, see <http://www.gnu.org/licenses/>.
 
