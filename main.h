@@ -4,6 +4,7 @@
 /* Include standard headers for required functions and types */
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 #include <stdarg.h>
 
 /* Function prototypes for custom printf and helpers */
@@ -21,6 +22,7 @@ int _print_upper_hexa(va_list args);
 int _print_binary(va_list args);
 int _print_ascii(va_list args);
 int _print_memory(va_list args);
+int _print_reverse(va_list args);
 
 /**
  * struct format_specifier - Struct that links a format char to a print func.

@@ -12,6 +12,7 @@ struct format_specifier format_types[] = {
 	{'b', _print_binary},
 	{'S', _print_ascii},
 	{'p', _print_memory},
+	{'r', _print_reverse},
 	{'%', NULL},
 	{'\0', NULL}
 };
