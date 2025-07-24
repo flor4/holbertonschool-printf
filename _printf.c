@@ -17,7 +17,6 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '\0')
 		return (0);
-
 	format_types = get_format_types();
 	va_start(args, format);
 	for (i = 0; format[i]; i++) /* Loop through each char in the format string */
@@ -48,7 +47,6 @@ int _printf(const char *format, ...)
 		else /* Print regular character */
 			count += _putchar(format[i]);
 	}
-	_putchar(-1);
 	va_end(args);
 	return (count);
 }
