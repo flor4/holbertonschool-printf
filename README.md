@@ -1,36 +1,22 @@
 # printf clone
 ## 📌 Description
-This project is a custom implementation of the standard C `printf` function.
-The `_printf()` function provides formatted output conversion and printing, supporting the following format specifiers:
-
-- `%c` : Character
-- `%s` : String
-- `%d`: signed integer.
-- `%i`: Signed integer.
-- `%%`: The percent character.
-- `%u`: Unsigned integer.
-- `%o`: Octal number.
-- `%x`: Lower hexadecimal -0 to f-.
-- `%X`: Upper hexadecimal -0 to F-.
-- `%b`: Binary number.
-- `%S`: Special characters in hexadecimal.
-- `%p`: Pointer memory address.
-
-This project was developed as our first group project in Holberton School.
-It purpose is to deepen understanding of variadic functions, string manipulation, output formatting in C in peer coding environnement.
+This project is a custom implementation of the standard C printf function.
+the \_printf() function handles formatted output conversion and printing,
+supporting a variety of <a href="format">format specifiers</a>.
+It was developed as our first group project at Holberton School,
+with the goal of deepening our understanding of variadic functions, string manipulations,
+and output formatting in C, all within a peer programming environment.
 
 ## 🚀 Getting Started
 ### ✅ Prerequisites
 - GCC (version 13.3.0 or higher recommended)
 - Make (optional, for easier compilation)
-- Unix-like OS (tested on Arch Linux and Windows via WSL)
+- Unix-like OS (tested on [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff)](#), [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)](#) and [![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)).
 
 ### 🛠️ Technologies Used
 [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](#)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)
-[![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff)](#)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)](#)
-[![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
+[![GCC](https://img.shields.io/badge/gcc-13.3.0-blue)
 
 ## 📥 Installation
 
@@ -63,24 +49,46 @@ int main(void)
     return 0;
 }
 ```
+<span id="format">The following format specifiers</span>:
 
-**Supported format specifiers:**
-- `%c` : Print a single character
-- `%s` : Print a string
-- `%d`, `%i` : Print a signed integer
+- `%c` : Character.
+- `%s` : String.
+- `%d`: signed integer.
+- `%i`: Signed integer.
+- `%%`: The percent character.
+- `%u`: Unsigned integer.
+- `%o`: Octal number.
+- `%x`: Lower hexadecimal -0 to f-.
+- `%X`: Upper hexadecimal -0 to F-.
+- `%b`: Binary number.
+- `%S`: Special characters in hexadecimal.
+- `%p`: Pointer memory address.
+- `%r`: Reverse a string.
+- `%R`: Conversion of a string in ROT13 format.
 
 ## 📁 Project Structure
 ```txt
 .
+├── LICENSE
 ├── README.md
+├── _print_ascii.c
+├── _print_binary.c
 ├── _print_char.c
 ├── _print_integer.c
+├── _print_lower_hexa.c
+├── _print_memory.c
+├── _print_octal.c
+├── _print_reverse.c
+├── _print_rot13.c
 ├── _print_string.c
+├── _print_unsigned.c
+├── _print_upper_hexa.c
 ├── _printf.c
 ├── _putchar.c
-├── main.c
+├── format_types.c
 ├── main.h
-└── man_3_printf
+├── man_3_printf
+└──
 ```
 
 ## 👥 Authors
