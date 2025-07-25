@@ -29,19 +29,23 @@ The \fB_printf\fR function prints a formatted string to the standard ouput (stdo
 .IP
  - %\m[yellow]%\m[white]: print the percent character.
 .IP
- - %\m[yellow]u\m[white]: print unsigned integer.
+ - %\m[yellow]u\m[white]: print an unsigned integer.
 .IP
- - %\m[yellow]o\m[white]: print octal number.
+ - %\m[yellow]o\m[white]: print an octal number.
 .IP
- - %\m[yellow]x\m[white]: print lower hexadecimal -0 to f-.
+ - %\m[yellow]x\m[white]: print a lower hexadecimal -0 to f-.
 .IP
- - %\m[yellow]X\m[white]: print upper hexadecimal -0 to F-.
+ - %\m[yellow]X\m[white]: print an upper hexadecimal -0 to F-.
 .IP
- - %\m[yellow]b\m[white]: print binary number.
+ - %\m[yellow]b\m[white]: print a binary number.
 .IP
- - %\m[yellow]S\m[white]: print special characters in hexadecimal.
+ - %\m[yellow]S\m[white]: print a special characters in hexadecimal.
 .IP
- - %\m[yellow]p\m[white]: print pointer memory address.
+ - %\m[yellow]p\m[white]: print a pointer memory address.
+.IP
+ - %\m[yellow]r\m[white]: print a string in reverse.
+.IP
+ - %\m[yellow]R\m[white]: print a string convert in ROT13 format.
 
 .SH \m[cyan]RETURN VALUES\m[white]
 
@@ -49,15 +53,14 @@ The function returns the total number of characters printed to the standard outp
 
 .SH \m[cyan]EXAMPLES\m[white]
 
-Here is a simple example of using
-.B _printf
-In a C program: print a the string \m[bisous]"bisous"\m[white] followed by a newline:
+Here a simple example of using \fB_printf\fR in a C program:
+.PP
+Print a the string \m[bisous]"bisous"\m[white] followed by a newline:
 
 .nf
-#include <stdio.h>
 
 int main (void) {
-	_printf("\m[bisous]bisous\m[white] \\n");
+	_printf("\m[bisous]bisous\m[white]\\n");
 	return (0);
 }
 .fi
